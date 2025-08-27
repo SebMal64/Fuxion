@@ -8,9 +8,17 @@
   font-size: 1.05rem;
 }
 nav {
-  display: block;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--rojo);
+  color: white;
+  height: 60px;
+  width: 100%;
   position: fixed;
  top:0;
+ z-index: 200;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 main {
   display: flex;

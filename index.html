@@ -13,10 +13,10 @@
 <body class="bg-gray-100 font-sans">
 
   <!-- Header -->
-  <header class="bg-[#800000] text-white shadow">
+  <nav class="bg-red-800 text-white shadow space-x-4">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-2xl font-bold">Servicios Generales Fuxion</h1>
-      <nav class="space-x-4">
+      
         <a href="#inicio" class="hover:text-gray-200">Inicio</a>
         <a href="#inicio" class="hover:text-gray-200">Nosotros</a>
         <a href="#servicios" class="hover:text-gray-200">Servicios</a>
@@ -24,20 +24,17 @@
         <div id="main-icon"><a target="_blank"
             href="https://wa.me/51999073114?text=Hola,%20quiero%20recibir%20informacion%20acerca%20de%20como%20matricularme%20en%20Rabindranth%20Tagore">
             <img class="w-icon" src="fuxion-pictures/icon.png"></a></div>
-      </nav>
-    </div>
-  </header>
+      
+    </div></nav>
 
   <div id="main-icon"><a target="_blank"
       href="https://wa.me/51999073114?text=Hola,%20quiero%20recibir%20informacion%20acerca%20de%20como%20matricularme%20en%20Rabindranth%20Tagore">
       <img class="w-icon" src="fuxion-pictures/icon.png"></div>
   <!-- Hero -->
+
   <main id="inicio">
-    <div id="slider">
+    <div>
       <div><img id="img1" src="fuxion-pictures/a2.jpeg"></div>
-      <div><img id="img2" src="fuxion-pictures/a4.jpeg"></div>
-      <div><img id="img3" src="fuxion-pictures/b1.jpeg"></div>
-      <div><img id="img4" src="fuxion-pictures/b1.jpeg"></div>
     </div>
     <div class="cuadro bg-cover bg-center h-96 flex items-center justify-center text-white text-center"
       style="background-image: url('https://source.unsplash.com/1600x900/?construction,tools');">
@@ -53,21 +50,24 @@
 
   <!-- Servicios -->
   <section id="servicios" class="container mx-auto py-12">
-    <h3 class="text-3xl font-bold text-center mb-10">Nuestros Servicios</h3>
-    <div class="grid gap-8 md:grid-cols-4 px-4">
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+    <h3 class="text-3xl font-bold mb-10">Nuestros Servicios</h3>
+    <div class="grid  md:grid-cols-2 gap-8 px-4">
+      <div class="bg-white p-6 grid md:grid-cols-3 gap-8 rounded-lg shadow hover:shadow-lg">
         <img src="fuxion-pictures/a4.jpeg" alt="Estructuras Metálicas" class="rounded mb-4">
+        <div class="col-span-2">
         <h4 class="text-xl font-semibold mb-2">Estructuras Metálicas</h4>
         <p class="text-gray-600 text-sm/6">Fabricamos y montamos estructuras metálicas resistentes y a medida para todo
           tipo de proyectos.
           Garantizamos precisión,
           durabilidad y acabados profesionales que cumplen con los más altos estándares de calidad.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+      </div></div>
+      <div class="bg-white p-6 grid md:grid-cols-3 gap-8 rounded-lg shadow hover:shadow-lg">
         <img src="fuxion-pictures/a1.jpeg" alt="Drywall" class="rounded mb-4">
+        <div class="col-span-2">
+        
         <h4 class="text-xl font-semibold mb-2">Drywall</h4>
         <p>Instalación de tabiques y cielos rasos con acabados de calidad.</p>
-      </div>
+      </div></div>
       <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
         <img src="https://source.unsplash.com/400x300/?wood,furniture" alt="Melamine" class="rounded mb-4">
         <h4 class="text-xl font-semibold mb-2">Melamine</h4>
@@ -88,7 +88,7 @@
     </div>
   </section>
 
-  <section class="bg-red-800 pt-6 max-w-max	px-4 md:w-1/2 " id="proyectos">
+  <section class="bg-slate-300 pt-6	px-4 w-full" id="proyectos">
     <h2 class="text-3xl font-bold mb-6">Proyectos realizados</h2>
     <div class="mb-4">
       <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Todos</button>

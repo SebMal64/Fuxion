@@ -13,19 +13,43 @@
 <body class="bg-gray-100 font-sans">
 
   <!-- Header -->
-  <nav class="bg-red-800 text-white shadow space-x-4">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold">Servicios Generales Fuxion</h1>
-      
-        <a href="#inicio" class="hover:text-gray-200">Inicio</a>
-        <a href="#inicio" class="hover:text-gray-200">Nosotros</a>
-        <a href="#servicios" class="hover:text-gray-200">Servicios</a>
-        <a href="#contacto" class="hover:text-gray-200">Contacto</a>
-        <div id="main-icon"><a target="_blank"
-            href="https://wa.me/51999073114?text=Hola,%20quiero%20recibir%20informacion%20acerca%20de%20como%20matricularme%20en%20Rabindranth%20Tagore">
-            <img class="w-icon" src="fuxion-pictures/icon.png"></a></div>
-      
-    </div></nav>
+  
+ <nav class="bg-red-800 text-white shadow">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold">Servicios Generales Fuxion</h1>
+    <!-- Hamburger (mobile) -->
+    <button id="menu-btn" class="md:hidden block focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+    <!-- Nav items -->
+    <div id="nav-links" class="hidden md:flex space-x-4">
+      <a href="#servicios" class="hover:text-gray-200">Servicios</a>
+      <a href="#proyectos" class="hover:text-gray-200">Proyectos</a>      
+      <a href="#nosotros" class="mx-16 hover:text-gray-200">Nosotros</a>
+      <a href="#contacto" class="hover:text-gray-200">Contacto</a>
+    </div>
+  </div>
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+ 
+    <a href="#servicios" class="block py-2 hover:text-gray-200">Servicios</a>
+    <a href="#proyectos" class="block py-2 hover:text-gray-200">Proyectos</a>     
+    <a href="#nosotros" class="block py-2 hover:text-gray-200">Nosotros</a>
+    <a href="#contacto" class="block py-2 hover:text-gray-200">Contacto</a>
+  </div>
+  <script>
+    // Simple hamburger toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</nav>
 
   <div id="main-icon"><a target="_blank"
       href="https://wa.me/51999073114?text=Hola,%20quiero%20recibir%20informacion%20acerca%20de%20como%20matricularme%20en%20Rabindranth%20Tagore">
@@ -34,7 +58,7 @@
 
   <main id="inicio">
     <div>
-      <div><img id="img1" src="fuxion-pictures/a2.jpeg"></div>
+      <div><img id="img1" src="fuxion-pictures/b1.jpeg"></div>
     </div>
     <div class="cuadro bg-cover bg-center h-96 flex items-center justify-center text-white text-center"
       style="background-image: url('https://source.unsplash.com/1600x900/?construction,tools');">
@@ -49,53 +73,64 @@
   </main>
 
   <!-- Servicios -->
-  <section id="servicios" class="container mx-auto py-12">
-    <h3 class="text-3xl font-bold mb-10">Nuestros Servicios</h3>
-    <div class="grid  md:grid-cols-2 gap-8 px-4">
-      <div class="bg-white p-6 grid md:grid-cols-3 gap-8 rounded-lg shadow hover:shadow-lg">
-        <img src="fuxion-pictures/a4.jpeg" alt="Estructuras Metálicas" class="rounded mb-4">
-        <div class="col-span-2">
-        <h4 class="text-xl font-semibold mb-2">Estructuras Metálicas</h4>
-        <p class="text-gray-600 text-sm/6">Fabricamos y montamos estructuras metálicas resistentes y a medida para todo
-          tipo de proyectos.
-          Garantizamos precisión,
-          durabilidad y acabados profesionales que cumplen con los más altos estándares de calidad.</p>
-      </div></div>
-      <div class="bg-white p-6 grid md:grid-cols-3 gap-8 rounded-lg shadow hover:shadow-lg">
-        <img src="fuxion-pictures/a1.jpeg" alt="Drywall" class="rounded mb-4">
-        <div class="col-span-2">
-        
-        <h4 class="text-xl font-semibold mb-2">Drywall</h4>
-        <p>Instalación de tabiques y cielos rasos con acabados de calidad.</p>
-      </div></div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <img src="https://source.unsplash.com/400x300/?wood,furniture" alt="Melamine" class="rounded mb-4">
-        <h4 class="text-xl font-semibold mb-2">Melamine</h4>
-        <p>Fabricación de muebles y estructuras en melamine a medida.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <img src="https://source.unsplash.com/400x300/?gym,equipment" alt="Maquinaria para Gimnasio"
-          class="rounded mb-4">
-        <h4 class="text-xl font-semibold mb-2">Maquinaria para Gimnasio</h4>
-        <p>Venta y equipamiento de máquinas para gimnasios profesionales y domésticos.</p>
-      </div>
-      <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-        <img src="https://source.unsplash.com/400x300/?gym,equipment" alt="Maquinaria para Gimnasio"
-          class="rounded mb-4">
-        <h4 class="text-xl font-semibold mb-2">Carpinteria metálica</h4>
-        <p>Venta y equipamiento de máquinas para gimnasios profesionales y domésticos.</p>
+  <section id="servicios" class="bg-blue-100 py-16">
+    <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
+      <h3 class="text-3xl font-bold mb-10">Nuestros Servicios</h3>
+      <div class="grid  md:grid-cols-2 gap-4 px-4">
+        <div class="bg-white p-6 grid md:grid-cols-3 gap-8 rounded-lg shadow hover:shadow-lg">
+          <img src="fuxion-pictures/a4.jpeg" alt="Estructuras Metálicas" class="rounded mb-4">
+          <div class="col-span-2">
+            <h4 class="text-xl font-semibold mb-2">Estructuras Metálicas</h4>
+            <p class="text-gray-600 text-sm/6">Fabricamos y montamos estructuras metálicas resistentes y a medida para
+              todo
+              tipo de proyectos.
+              Garantizamos precisión,
+              durabilidad y acabados profesionales que cumplen con los más altos estándares de calidad.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 grid md:grid-cols-3 gap-8 rounded-lg shadow hover:shadow-lg">
+          <img src="fuxion-pictures/a1.jpeg" alt="Drywall" class="rounded mb-4">
+          <div class="col-span-2">
+
+            <h4 class="text-xl font-semibold mb-2">Drywall</h4>
+            <p>Instalación de tabiques y cielos rasos con acabados de calidad.</p>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="https://source.unsplash.com/400x300/?wood,furniture" alt="Melamine" class="rounded mb-4">
+          <h4 class="text-xl font-semibold mb-2">Melamine</h4>
+          <p>Fabricación de muebles y estructuras en melamine a medida.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="https://source.unsplash.com/400x300/?gym,equipment" alt="Maquinaria para Gimnasio"
+            class="rounded mb-4">
+          <h4 class="text-xl font-semibold mb-2">Maquinaria para Gimnasio</h4>
+          <p>Venta y equipamiento de máquinas para gimnasios profesionales y domésticos.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <img src="https://source.unsplash.com/400x300/?gym,equipment" alt="Maquinaria para Gimnasio"
+            class="rounded mb-4">
+          <h4 class="text-xl font-semibold mb-2">Carpinteria metálica</h4>
+          <p>Venta y equipamiento de máquinas para gimnasios profesionales y domésticos.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="bg-slate-300 pt-6	px-4 w-full" id="proyectos">
-    <h2 class="text-3xl font-bold mb-6">Proyectos realizados</h2>
-    <div class="mb-4">
-      <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Todos</button>
-      <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Estructuras metálicas</button>
-      <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Carpinteria metálica</button>
-      <button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Drywall</button>
-</div>
+  <section class="bg-slate-300 w-full pt-6  px-48" id="proyectos">
+    <h2 class="text-3xl font-bold mb-4">Proyectos realizados</h2>
+    <div class="mb-8">
+      <button type="button"
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Todos</button>
+      <button type="button"
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Estructuras
+        metálicas</button>
+      <button type="button"
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Carpinteria
+        metálica</button>
+      <button type="button"
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Drywall</button>
+    </div>
     <div class="grid grid-cols-4 grid-rows-3 gap-2 md:gap-4 lg:gap-6 mb-6">
       <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
       <img class="size-40 object-center object-cover" src="fuxion-pictures/a1.jpeg">
@@ -106,14 +141,22 @@
       <img class="size-40 object-center object-cover" src="fuxion-pictures/a5.jpeg">
       <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
       <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
+      <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
+      <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
+      <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
+      <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
+      <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
+      <img class="size-40 object-center object-cover" src="fuxion-pictures/b1.jpeg">
 
     </div>
-    <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-</svg>
-<span class="sr-only">Icon description</span>
-</button>
+    <button type="button"
+      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M1 5h12m0 0L9 1m4 4L9 9" />
+      </svg>
+      <span class="sr-only">Icon description</span>
+    </button>
   </section>
   <!-- Contacto -->
   <section id="contacto" class="bg-gray-200 py-12">

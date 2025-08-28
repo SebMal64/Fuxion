@@ -32,60 +32,7 @@ main {
     background-size:cover;
     overflow: hidden;
 }
-#slider{
-    position:absolute;
-    height: 100vh;
-    width: 400vw;
-    display: grid;
-    animation: 2s move infinite linear;
-    grid-template-columns: repeat(4, 100vw);
-    grid-template-rows: repeat(4, 1100px);
-    overflow-y: hidden;
-    overflow-x: hidden;
-    animation: move 33s infinite ease-in-out;
-    -webkit-animation: move 33s infinite ease-in-out;
-}
-#img1, #img2, #img3, #img4 {
-  height: 100%;
-  width: 100vw;
-  object-fit: cover;
-}
-@keyframes move {
-  0% {
-    left: 0%;  
 
-}
-/*Transicion imagen 2*/
-18% {
-  left: 0%;
-  
-}
-25% {
-  left: -100vw;
-}
-/*Transicion imagen 3*/
-
-43% {
-  left: -100vw
-}
-50% {
-  left: -200vw;
-}
-/*Transicion imagen 4*/
-
-68% {
-  left: -200vw;
-}
-
-  75% {
-    left: -300vw;  }
-    95% {
-      left: -300vw
-    }
-    100% {
-      left: 0%;
-    }
-}
 .cuadro {
     z-index: 10;
 }

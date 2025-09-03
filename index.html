@@ -124,22 +124,28 @@
         class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Drywall</button>
     </div>
     <div class="overflow-x-hidden">
+      <article class="absolute z-5 bg-green-400 w-full  grid md:grid-cols-2" id="card">
+      <img src="fuxion-pictures/a1.jpeg" alt="arrow" class="w-96 h-96 object-cover">
+      <button onClick="ocultar()"><img src="fuxion-pictures/cross.svg" alt="cross"
+         class="absolute h-10 top-2 right-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs"></button>
+      <div class="p-4">
+      <span class="rounded bg-blue-100">drywall</span>
+<h2>Hola drywall</h2>
+<p>Este es un coinjunto de drywall hecho con pan y amllorca</p>
+<span><img src="fuxion-pictures/marker.svg" alt="cross" class="w-100 h-10">ubicacion</span></div>
+    </article>
       <div class="grid grid-cols-2 grid-rows-4 gap-1 mb-6 md:grid-cols-4 md:grid-rows-2">
-        <div class="relative">
+        <button class="relative" onclick="mostrar()">
           <img class="w-full h-full rounded-none md:rounded md:h-48 object-cover" src="fuxion-pictures/b1.jpeg" alt="proyect1">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect1</span>
-        </div>
+        </button>
         <div class="relative">
           <img class="w-full h-48 object-cover rounded" src="fuxion-pictures/a1.jpeg" alt="proyect2">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect2</span>
         </div>
-        <div class="relative">
-          <img class="w-full h-full rounded-none md:rounded md:h-48 object-cover" src="fuxion-pictures/a1.jpeg" alt="proyect3">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect3</span>
-        </div>
+        
         <div class="relative">
           <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/a2.jpeg" alt="proyect4">
           <span
@@ -160,46 +166,8 @@
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect7</span>
         </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/b1.jpeg" alt="proyect8">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect8</span>
-        </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/b1.jpeg" alt="proyect9">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect9</span>
-        </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/b1.jpeg" alt="proyect10">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect10</span>
-        </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/b1.jpeg" alt="proyect11">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect11</span>
-        </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/b1.jpeg" alt="proyect12">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect12</span>
-        </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/b1.jpeg" alt="proyect13">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect13</span>
-        </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/c1.jpeg" alt="proyect14">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect14</span>
-        </div>
-        <div class="relative">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/arrow.png" alt="proyect15">
-          <span
-            class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect15</span>
-        </div>
+       
+       
       </div>
     </div>
     <button type="button">
@@ -208,16 +176,9 @@
     </button>
   
   </section>  
-  <article class="bg-green-400 w-full grid md:grid-cols-2"    id="card">
-      <img src="fuxion-pictures/a1.jpeg" alt="arrow" class="w-10 h-10">
-      <div>
-      <span class="rounded bg-blue-100">drywall</span>
-<h2>Hola drywall</h2>
-<p>Este es un coinjunto de drywall hecho con pan y amllorca</p>
-<p>ubicacion</p></div>
-    </article>
+  
   <!-- Contacto -->
-  <section id="contacto" class="bg-gray-200 py-12">
+  <section id="contacto" class="z-index-1 bg-gray-200 py-12">
     <div class="container mx-auto px-4 md:w-1/2">
       <h3 class="text-3xl font-bold text-center mb-6">Contáctanos</h3>
       <form class="bg-white p-6 rounded-lg shadow space-y-4">

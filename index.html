@@ -8,6 +8,7 @@
   <title>Servicios Generales Fuxion</title>
   <!-- Tailwind CSS vía CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <scrip type="text/javascript" src="data.js"></script>
 </head>
 
 <body class="bg-gray-100 font-sans">
@@ -126,13 +127,13 @@
     <div class="overflow-x-hidden">
 
       <div class="grid grid-cols-2 grid-rows-4 gap-1 mb-6 md:grid-cols-4 md:grid-rows-2">
-        <button class="relative" onclick="mostrar()">
+        <button class="relative" onclick="mostrarCard()">
           <img class="w-full h-full rounded-none md:rounded md:h-48 object-cover" src="fuxion-pictures/b1.jpeg"
             alt="proyect1">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect1</span>
         </button>
-        <button class="relative" onclick="mostrar()"></button>
+        <button class="relative" onclick="mostrar()">
         <img class="w-full h-48 object-cover rounded" src="fuxion-pictures/a1.jpeg" alt="proyect2">
         <span
           class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect2</span>
@@ -152,7 +153,7 @@
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect6</span>
         </button>
-        <button class="relative" onclick="mostrar()"></button>
+        <button class="relative" onclick="mostrar()">
         <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/a5.jpeg" alt="proyect7">
         <span
           class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect7</span>
@@ -198,17 +199,19 @@
     </script>
     © Servicios Generales Fuxion - Todos los derechos reservados
   </footer>
+
   <article class="fixed inset-0 top-20 left-0 w-96 z-50 bg-white shadow-lg p-8 flex items-center justify-center rounded
        grid md:grid-cols-2" id="card">
     <img src="fuxion-pictures/a1.jpeg" alt="arrow" class="w-48 h-48 object-cover">
-    <button onClick="ocultar()"><img src="fuxion-pictures/cross.svg" alt="cross"
+    <button id="btn-card" onClick="ocultar()"><img src="fuxion-pictures/cross.svg" alt="cross"
         class="absolute h-10 top-2 right-2 bg-opacity-50 text-white px-2 py-1 rounded text-xs"></button>
     <div class="p-4">
-      <h2 class="font-bold mb-2">Hola drywall</h2>
-      <p>Este es un coinjunto de drywall hecho con pan y amllorca</p>
+      <h2 id="card-head" class="font-bold mb-2">Hola drywall</h2>
+      <p id="card-p">Este es un coinjunto de drywall hecho con pan y amllorca</p>
       <div class="my-3"><span class="rounded bg-blue-100 p-3 inline-block  ">drywall</span>
-      <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br /></div>
-      <span><img src="fuxion-pictures/marker.svg" alt="cross" class=" w-5 h-5 inline-block mr-2">ubicacion,
+        <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br / 4>
+      </div>
+      <span id="location-card"><img src="fuxion-pictures/marker.svg" alt="cross" class=" w-5 h-5 inline-block mr-2">ubicacion,
         Peru</span>
     </div>
   </article>

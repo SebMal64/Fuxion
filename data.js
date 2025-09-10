@@ -15,4 +15,12 @@ const proyectos = [
         "location": "Peru",
         "image": "fuxion-pictures/a2.jpeg"
     },
+    {
+        "id":3,
+        "title": "Máquina de gimnasio",
+        "description": "máquina de gimnasio multifuncional",
+        "tags": ["gimnasio", "máquina"],
+        "location": "Lima, Peru",
+        "image": "fuxion-pictures/a3.jpeg"
+    }
 ];

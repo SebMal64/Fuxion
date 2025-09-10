@@ -54,6 +54,15 @@ section {
 }
 
 
+#nosotros::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(122, 0, 0, 0.723); /* Adjust opacity and blue shade */
+  z-index: 1;
+  pointer-events: none;
+}
+
 @media (max-width: 767px) {
   * {
     font-size: 0.92rem;

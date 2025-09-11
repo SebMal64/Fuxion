@@ -1,10 +1,10 @@
 const proyectos = [
     {
         "id":1,
-        "title": "siubefgiubdiugsd drywall",
+        "title": "Patrones en Drywall",
         "description": "Este es un coinjunto de drywall hecho con pan y amllorca de la isugientes semansasdcas",
-        "tags": ["drywall", "drywall"],
-        "location": "Huaycanaa , Peru",
+        "tags": ["drywall"],
+        "location": "Ate, Peru",
         "image": "fuxion-pictures/a1.jpeg"
     },
     {

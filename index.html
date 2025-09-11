@@ -16,9 +16,9 @@
   <!-- Header -->
 
   <nav class="bg-red-800 text-white shadow">
-    <div class="container mx-auto flex justify-between items-center px-24">
+    <div class="container flex justify-between items-center mx-4 md:px-24">
       <!-- Logo -->
-      <h1 class="text-2xl font-bold">Servicios Generales Fuxion</h1>
+      <h1 class="text-lg font-medium md:text-2xl">Servicios Generales Fuxion</h1>
       <!-- Hamburger (mobile) -->
       <button id="menu-btn" class="md:hidden block focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -29,7 +29,7 @@
       <div id="nav-links" class="hidden md:flex space-x-4">
         <a href="#servicios" class="hover:text-gray-200">Servicios</a>
         <a href="#proyectos" class="hover:text-gray-200">Proyectos</a>
-        <a href="#nosotros" class="mx-16 hover:text-gray-200">Nosotros</a>
+        <a href="#nosotros" class="hover:text-gray-200">Nosotros</a>
         <a href="#contacto" class="hover:text-gray-200">Contacto</a>
       </div>
     </div>
@@ -77,11 +77,13 @@
 
   <!-- Servicios -->
   <section id="servicios" class="bg-blue-100 py-16">
-    <div class="w-full max-w-4xl mx-auto flex flex-col items-center">
+    <div class="w-full px-48 flex flex-col items-center justify-center">
       <h3 class="text-3xl font-bold mb-10">Nuestros Servicios</h3>
-      <div class="grid md:grid-cols-2 gap-4 px-4">
-        <div class="bg-white p-6 gap-6 rounded-lg shadow hover:shadow-lg flex flex-col md:flex-row items-center">
-          <img src="fuxion-pictures/a4.jpeg" alt="Estructuras Metálicas" class="w-full h-40 object-cover rounded mb-4">
+      <div class="grid md:grid-cols-2 gap-8 ">
+
+
+        <div class="bg-blue-300 p-4 gap-6 shadow hover:shadow-lg flex flex-col md:flex-row items-center">
+          <img src="fuxion-pictures/a4.jpeg" alt="Estructuras Metálicas" class="scale-x-125 h-40 object-cover">
           <div class="col-span-2">
             <h4 class="text-xl font-semibold mb-2">Estructuras Metálicas</h4>
             <p class="text-gray-600 text-sm/6">Fabricamos y montamos estructuras metálicas resistentes y a medida para
@@ -89,7 +91,9 @@
           </div>
 
         </div>
-        <div class="bg-white p-6 grid md:grid-cols-3 gap-8 rounded-lg shadow hover:shadow-lg">
+
+        
+        <div class="bg-white p-6 grid md:grid-cols-3 gap-8  shadow hover:shadow-lg">
           <img src="fuxion-pictures/b1.jpeg" alt="Drywall" class="w-full h-40 object-cover rounded mb-4">
           <div class="col-span-2">
 
@@ -112,15 +116,18 @@
       </div>
     </div>
   </section>
+
+
+  
   <!-- Nosotros -->
   <section id="nosotros"
-    class="relative w-full bg-cover bg-center bg-no-repeat flex items-center justify-center git pu py-8 md:py-16"
+    class="relative w-full bg-cover bg-center bg-no-repeat flex items-center justify-center px-10 md:px-48 py-12 md:py-16"
     style="background-image: url('fuxion-pictures/techo.jpg');">
     <!-- Overlay -->
     <div class="absolute inset-0 bg-blue-900/60 pointer-events-none z-0"></div>
     <!-- Content -->
     <div class="relative z-10 mx-4 md:w-full text-center text-white">
-      <h3 class="text-3xl font-bold mb-16 text-red-100">¿Por qué eligirnos?</h3>
+      <h3 class="text-3xl font-bold mb-6 md:mb-16 text-red-100">¿Por qué eligirnos?</h3>
       <div class="grid md:grid-cols-3 gap-8 md:gap-24">
         
          <div>
@@ -174,7 +181,7 @@
     </div>
     <div class="overflow-x-hidden">
 
-      <div class="grid grid-cols-2 grid-rows-3 gap-8 mb-6 md:grid-cols-3 md:grid-rows-2">
+      <div class="grid grid-cols-2 grid-rows-3 gap-4 md:gap-8 mb-6 md:grid-cols-3 md:grid-rows-2">
         <button class="relative" onclick="mostrarCard(1)">
           <img class="w-full h-full rounded-none md:rounded md:w-96 md:h-48 object-cover" src="fuxion-pictures/b1.jpeg"
             alt="proyect1">
@@ -245,7 +252,7 @@
       document.write(update);
 
     </script>
-    © Servicios Generales Fuxion - Todos los derechos reservados
+    © Servicios Generales Fuxion.</br> Todos los derechos reservados
   </footer>
 
   <article class="fixed inset-0 top-20 left-0 w-96 z-50 bg-white shadow-lg p-8 flex items-center justify-center rounded
@@ -253,7 +260,7 @@
 
     <img id="card-img" src="" alt="" class="w-80 h-48 object-cover">
 
-    <button id="btn-card" onClick="ocultar()"><img src="fuxion-pictures/cross.svg" alt="cross"
+    <button id="btn-card" onClick="ocultar()"><img src="fuxion-pictures/iconos/cross.svg" alt="cross"
         class="absolute h-10 top-2 right-2 bg-opacity-50 text-white px-2 py-1 rounded text-xs"></button>
     <div class="p-4">
       <h2 id="card-head" class="font-bold mb-2"></h2>
@@ -262,7 +269,7 @@
         <span class="rounded bg-blue-100 p-3 inline-block ">drywall</span>
         <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br / 4>
       </div>
-      <span id="location-card"><img src="fuxion-pictures/marker.svg" alt="cross"
+      <span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="cross"
           class="w-5 h-5 inline-block mr-2">ubicacion,
       </span>
     </div>

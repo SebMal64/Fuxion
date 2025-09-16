@@ -1,17 +1,17 @@
 const proyectos = [
     {
         "id":1,
-        "title": "Patrones en Drywall",
-        "description": "Este es un coinjunto de drywall hecho con pan y amllorca de la isugientes semansasdcas",
+        "title": "Diseño en Drywall",
+        "description": "Cielo raso de Drywall con patrones circulares, iluminado con luces LED. Diseño moderno y elegante. Perfecto para realizar reuniones casuales con amigos o familiares",
         "tags": ["drywall"],
         "location": "Ate, Peru",
-        "image": "fuxion-pictures/a1.jpeg"
+        "image": "fuxion-pictures/drywall.jpeg"
     },
     {
         "id":2,
-        "title": "rataa",
-        "description": "Este es un coinjunto de drywall hecho con pan y amllorca",
-        "tags": ["tatuado", "drywall", "nina"],
+        "title": "base metálica para mesa",
+        "description": "Base metálica con diseño minimalista, moderno y elegante para una mesa de mármol. Ideal para oficinas y contextos formales",
+        "tags": ["estructuras metálicas"],
         "location": "Peru",
         "image": "fuxion-pictures/a2.jpeg"
     },

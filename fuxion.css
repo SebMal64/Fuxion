@@ -53,6 +53,15 @@ section {
   position: relative;
 }
 
+.heading-section {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+color:rgb(62, 62, 62);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem 0;
+
+}
 
 #nosotros::after {
   content: "";
@@ -61,6 +70,12 @@ section {
   background: rgba(122, 0, 0, 0.723); /* Adjust opacity and blue shade */
   z-index: 1;
   pointer-events: none;
+}
+.img-effect:hover {
+  transform: scale(1.2);
+  transition-duration: 3s;
+opacity: blur(1px);
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {

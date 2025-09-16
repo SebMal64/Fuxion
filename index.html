@@ -78,7 +78,7 @@
   <!-- Servicios -->
   <section id="servicios" class="bg-gray-200 py-16">
     <div class="w-full px:4 md:px-48 flex flex-col items-center justify-center">
-      <h3 class="text-3xl font-bold mb-10">Nuestros Servicios</h3>
+      <h3 class="heading-section">Nuestros Servicios</h3>
       <div class="grid md:grid-cols-2 gap-12">
 
 
@@ -181,8 +181,8 @@
 
   <!-- Proyectos -->
   <section class="bg-gray-200 w-full px-2   md:py-6  md:px-48" id="proyectos">
-    <h2 class="text-3xl font-bold mb-4">Proyectos realizados</h2>
-    <div class="mb-8">
+    <h2 class="heading-section">Proyectos realizados</h2>
+    <!--<div class="mb-8">
       <button type="button"
         class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Todos</button>
       <button type="button"
@@ -193,22 +193,23 @@
         metálica</button>
       <button type="button"
         class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Drywall</button>
-    </div>
+    </div>-->
     <div class="overflow-x-hidden">
 
       <div class="grid grid-cols-2 grid-rows-3 gap-4 md:gap-8 mb-6 md:grid-cols-3 md:grid-rows-2">
-        <button class="relative" onclick="mostrarCard(1)">
-          <img class="w-full h-full rounded-none md:rounded md:w-96 md:h-48 object-cover" src="fuxion-pictures/b1.jpeg"
+        <button class="relative overflow-hidden" onclick="mostrarCard(1)">
+          <img class="w-full h-full rounded-none md:rounded md:w-96 md:h-48 object-cover img-effect" src="fuxion-pictures/drywall.jpeg"
             alt="proyect1">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect1</span>
         </button>
+        
         <button class="relative" onclick="mostrarCard(2)">
           <img class="w-full h-48 object-cover rounded" src="fuxion-pictures/a1.jpeg" alt="proyect2">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect2</span>
         </button>
-        <button class="relative" onclick="mostrar()">
+        <button class="relative" onclick="mostrarCard(3)">
           <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/a2.jpeg" alt="proyect4">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect4</span>
@@ -278,13 +279,13 @@
     <button id="btn-card" onClick="ocultar()"><img src="fuxion-pictures/iconos/cross.svg" alt="cross"
         class="absolute h-10 top-2 right-2 bg-opacity-50 text-white px-2 py-1 rounded text-xs"></button>
     <div class="p-4">
-      <h2 id="card-head" class="font-bold mb-2"></h2>
+      <h2 id="card-head" class="font-bold mb-2 uppercase"></h2>
       <p id="card-p" class="text-sm"></p>
       <div id="card-tags" class="my-3 text-sm">
         <span class="rounded bg-blue-100 p-3 inline-block ">drywall</span>
-        <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br / 4>
+        <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br/>
       </div>
-      <span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="cross"
+      <span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="location"
           class="w-5 h-5 inline-block mr-2">ubicacion,
       </span>
     </div>

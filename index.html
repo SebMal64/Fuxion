@@ -15,8 +15,8 @@
 
   <!-- Header -->
 
-  <nav class="bg-red-800 text-white shadow">
-    <div class="container flex justify-between items-center mx-4 md:px-24">
+  <nav class="bg-red-800 text-white shadow-lg">
+    <div class="container flex justify-center items-center gap-48 mx-4 md:mx-auto">
       <!-- Logo -->
       <h1 class="text-lg font-medium md:text-2xl">Servicios Generales Fuxion</h1>
       <!-- Hamburger (mobile) -->
@@ -26,20 +26,25 @@
         </svg>
       </button>
       <!-- Nav items -->
-      <div id="nav-links" class="hidden md:flex space-x-4">
+      <div id="nav-links" class="hidden md:flex space-x-16">
         <a href="#servicios" class="hover:text-gray-200">Servicios</a>
         <a href="#proyectos" class="hover:text-gray-200">Proyectos</a>
         <a href="#nosotros" class="hover:text-gray-200">Nosotros</a>
         <a href="#contacto" class="hover:text-gray-200">Contacto</a>
+        <a href="#contacto" class="bg-green-300 hover:text-gray-200">
+          
+          WhatsApp</a>
+
       </div>
     </div>
     <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+    <div id="mobile-menu" class="bg-gray-800 h-screen w-full justify-center items-center text-white
+     absolute top-16 md:hidden hidden px-4 pb-4">
 
-      <a href="#servicios" class="block py-2 hover:text-gray-200">Servicios</a>
-      <a href="#proyectos" class="block py-2 hover:text-gray-200">Proyectos</a>
-      <a href="#nosotros" class="block py-2 hover:text-gray-200">Nosotros</a>
-      <a href="#contacto" class="block py-2 hover:text-gray-200">Contacto</a>
+      <a href="#servicios" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Servicios</a>
+      <a href="#proyectos" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Proyectos</a>
+      <a href="#nosotros" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Nosotros</a>
+      <a href="#contacto" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-300">Contacto</a>
     </div>
     <script>
       // Simple hamburger toggle
@@ -47,6 +52,7 @@
       const mobileMenu = document.getElementById('mobile-menu');
       menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+        document.getElementById("menu-btn").display = "none";
       });
     </script>
   </nav>
@@ -94,7 +100,7 @@
 
 
         <div class="bg-gray-100 shadow hover:shadow-lg flex flex-col md:flex-row items-center">
-          <img src=" fuxion-pictures/b1.jpeg" alt="Drywall" class="h-full w-full md:w-48 object-cover">
+          <img src=" fuxion-pictures/drywall.jpeg" alt="Drywall" class="h-full w-full md:w-48 object-cover">
           <div class="m-8 col-span-2">
             <h4 class="text-xl font-medium mb-2">Drywall</h4>
             <p class="text-gray-600 text-sm/6">Instalación de tabiques y cielos rasos con acabados de calidad.</p>
@@ -132,7 +138,7 @@
     <!-- Content -->
     <div class="relative z-10 mx-4 md:w-full text-center text-white">
       <h3 class="text-3xl font-bold mb-6 md:mb-16 text-red-100">¿Por qué eligirnos?</h3>
-      <div class="grid md:grid-cols-3 gap-8 md:gap-24">
+      <div class="grid md:grid-cols-3 gamd:gap-24">
 
         <div>
 
@@ -184,26 +190,26 @@
     <h2 class="heading-section">Proyectos realizados</h2>
     <!--<div class="mb-8">
       <button type="button"
-        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Todos</button>
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-12.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Todos</button>
       <button type="button"
-        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Estructuras
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-12.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Estructuras
         metálicas</button>
       <button type="button"
-        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Carpinteria
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-12.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Carpinteria
         metálica</button>
       <button type="button"
-        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Drywall</button>
+        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-12.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Drywall</button>
     </div>-->
     <div class="overflow-x-hidden">
 
-      <div class="grid grid-cols-2 grid-rows-3 gap-4 md:gap-8 mb-6 md:grid-cols-3 md:grid-rows-2">
+      <div class="grid grid-cols-2 grid-rows-3 gap-4 md:gamb-6 md:grid-cols-3 md:grid-rows-2">
         <button class="relative overflow-hidden" onclick="mostrarCard(1)">
-          <img class="w-full h-full rounded-none md:rounded md:w-96 md:h-48 object-cover img-effect" src="fuxion-pictures/drywall.jpeg"
-            alt="proyect1">
+          <img class="w-full h-full rounded-none md:rounded md:w-96 md:h-48 object-cover img-effect"
+            src="fuxion-pictures/drywall.jpeg" alt="proyect1">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect1</span>
         </button>
-        
+
         <button class="relative" onclick="mostrarCard(2)">
           <img class="w-full h-48 object-cover rounded" src="fuxion-pictures/a1.jpeg" alt="proyect2">
           <span
@@ -245,10 +251,10 @@
     <div class="container mx-auto px-4 md:w-1/2">
       <h3 class="text-3xl font-bold text-center mb-6">Contáctanos</h3>
       <form class="bg-white p-6 rounded-lg shadow space-y-4">
-        <input type="text" placeholder="Nombre" class="w-full border rounded px-4 py-2" required>
-        <input type="email" placeholder="Correo electrónico" class="w-full border rounded px-4 py-2" required>
-        <textarea placeholder="Mensaje" class="w-full border rounded px-4 py-2 h-32" required></textarea>
-        <button type="submit" class="w-full bg-[#800000] text-white py-2 rounded hover:bg-red-800">Enviar</button>
+        <input type="text" placeholder="Nombre" class="w-full border rounded px-4 py-12" required>
+        <input type="email" placeholder="Correo electrónico" class="w-full border rounded px-4 py-12" required>
+        <textarea placeholder="Mensaje" class="w-full border rounded px-4 py-12 h-32" required></textarea>
+        <button type="submit" class="w-full bg-[#800000] text-white py-12 rounded hover:bg-red-800">Enviar</button>
       </form>
       <div class="text-center mt-6">
         <a href="https://wa.me/51967770433" target="_blank"
@@ -271,7 +277,7 @@
     © Servicios Generales Fuxion.</br> Todos los derechos reservados
   </footer>
 
-  <article class="fixed inset-0 top-20 left-0 w-96 z-50 bg-white shadow-lg p-8 flex items-center justify-center rounded
+  <article class="fixed inset-0 top-20 left-0 w-96 z-50 bg-white shadow-lg flex items-center justify-center rounded
        grid md:grid-cols-2" id="card">
 
     <img id="card-img" src="" alt="" class="w-80 h-48 object-cover">
@@ -283,7 +289,7 @@
       <p id="card-p" class="text-sm"></p>
       <div id="card-tags" class="my-3 text-sm">
         <span class="rounded bg-blue-100 p-3 inline-block ">drywall</span>
-        <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br/>
+        <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br />
       </div>
       <span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="location"
           class="w-5 h-5 inline-block mr-2">ubicacion,

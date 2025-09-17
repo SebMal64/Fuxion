@@ -1,3 +1,25 @@
+function toogleNav() {
+    var navLinks = document.getElementById("nav-links");
+    if (navLinks.style.display === "block") {
+        navLinks.style.display = "none";
+    } else {
+        navLinks.style.display = "block";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById("card").style.display="none";
 function mostrar(){
     document.getElementById("card").style.display="block";

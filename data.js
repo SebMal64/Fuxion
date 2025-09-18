@@ -22,5 +22,13 @@ const proyectos = [
         "tags": ["gimnasio", "máquina"],
         "location": "Lima, Peru",
         "image": "fuxion-pictures/a3.jpeg"
+    },
+    {
+        "id":4,
+        "title":"Mamparas de vidrio",
+        "description":"Mamparas de vidrio templado para oficinas y hogares. Diseño moderno y elegante que aporta luminosidad y amplitud a cualquier espacio.",
+        "tags": ["vidrio", "mamparas"],
+        "location":"Chosica, Peru",
+        "image":"fuxion-pictures/mampara.jpeg"
     }
 ];

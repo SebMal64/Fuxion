@@ -15,7 +15,7 @@
 
   <!-- Header -->
 
-  <nav class="bg-red-800 text-white shadow-lg">
+  <nav class="bg-red-800 w-full text-white shadow-lg">
     <div class="container flex justify-center items-center gap-48 mx-4 md:mx-auto">
       <!-- Logo -->
       <h1 class="text-lg font-medium md:text-2xl">Servicios Generales Fuxion</h1>
@@ -56,6 +56,10 @@
       });
     </script>
   </nav>
+  <div id="progress" class="barra fixed block"></div>
+
+
+
 
   <div id="main-icon"><a target="_blank"
       href="https://wa.me/51999073114?text=Hola,%20quiero%20recibir%20informacion%20acerca%20de%20como%20matricularme%20en%20Rabindranth%20Tagore">
@@ -210,8 +214,8 @@
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect1</span>
         </button>
 
-        <button class="relative" onclick="mostrarCard(2)">
-          <img class="w-full h-48 object-cover rounded" src="fuxion-pictures/a1.jpeg" alt="proyect2">
+        <button class="relative" onclick="mostrarCard(4)">
+          <img class="w-full h-48 object-cover rounded" src="fuxion-pictures/mampara.jpeg" alt="proyect2">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect2</span>
         </button>
@@ -221,7 +225,7 @@
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect4</span>
         </button>
         <button class="relative" onclick="mostrar()">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/a3.jpeg" alt="proyect5">
+          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/drywall-2.jpeg" alt="proyect5">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect5</span>
         </button>
@@ -277,11 +281,11 @@
     © Servicios Generales Fuxion.</br> Todos los derechos reservados
   </footer>
 
-  <article class="fixed inset-0 top-20 left-0 w-96 z-50 bg-white shadow-lg flex items-center justify-center rounded
+  <article class="fixed inset-0 z-50  shadow-lg flex items-center justify-center rounded
        grid md:grid-cols-2" id="card">
 
-    <img id="card-img" src="" alt="" class="w-80 h-48 object-cover">
-
+    <img id="card-img" src="" alt="" class=" md:h-48 object-cover">
+  <div class="relative">
     <button id="btn-card" onClick="ocultar()"><img src="fuxion-pictures/iconos/cross.svg" alt="cross"
         class="absolute h-10 top-2 right-2 bg-opacity-50 text-white px-2 py-1 rounded text-xs"></button>
     <div class="p-4">
@@ -294,7 +298,7 @@
       <span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="location"
           class="w-5 h-5 inline-block mr-2">ubicacion,
       </span>
-    </div>
+    </div></div>
   </article>
 </body>
 <script src="fuxion.js"></script>

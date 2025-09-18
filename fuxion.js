@@ -9,6 +9,21 @@ function toogleNav() {
 
 
 
+function barraScroll () {
+    //referencia al id
+    const $barra = document.getElementById("progress");
+    //desplazamiento vertical de la ventana
+    let vertical = window.scrollY;
+    //Tamaño total del documento
+    let Final = document.body.scrollHeight;
+    //tamanño total
+    let totalScroll = Final- window.innerHeight;
+    let porcentaje = (vertical * 100)/totalScroll;
+    $barra.style.width = `${porcentaje}%`
+
+}
+document.addEventListener('scroll', barraScroll);
+
 
 
 
@@ -39,7 +54,7 @@ function mostrarCard(projectId) {
     document.getElementById("card-p").innerText = item.description;
      let tagsHtml = "";
     item.tags.forEach(tag => {
-        tagsHtml += `<span class="rounded bg-blue-100 p-3 inline-block mr-2 mb-2">${tag}</span>`;
+        tagsHtml += `<span class="rounded uppercase bg-blue-100 p-3 inline-block mr-2 mb-2">${tag}</span>`;
     });
     document.getElementById("card-tags").innerHTML = tagsHtml;
     document.getElementById("location-card").innerHTML = 

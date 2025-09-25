@@ -25,26 +25,43 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
+      <button id="menu-btn-close" class="md:hidden block focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" fill="white" data-name="Layer 1" viewBox="0 0 24 24"
+          class="w-8 h-8">
+          <polygon
+            points="24 1.414 22.586 0 12 10.586 1.414 0 0 1.414 10.586 12 0 22.586 1.414 24 12 13.414 22.586 24 24 22.586 13.414 12 24 1.414" />
+        </svg></button> </span>Contacto</a>
+
       <!-- Nav items -->
-      <div id="nav-links" class="hidden md:flex space-x-16">
+      <div id="nav-links" class="hidden md:flex items-center space-x-16">
         <a href="#servicios" class="hover:text-gray-200">Servicios</a>
         <a href="#proyectos" class="hover:text-gray-200">Proyectos</a>
         <a href="#nosotros" class="hover:text-gray-200">Nosotros</a>
-        <a href="#contacto" class="hover:text-gray-200">Contacto</a>
-        <a href="#contacto" class="bg-green-300 hover:text-gray-200">
-          
-          WhatsApp</a>
+            <a href="#contacto" class="btn-contact">
+              <svg class="w-4 h-8 " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                height="10px" width="40px" version="1.1" id="Capa_1" viewBox="0 0 58 58" xml:space="preserve">
+                <g>
+                  <path style="fill:#ffffff;"
+                    d="M0,58l4.988-14.963C2.457,38.78,1,33.812,1,28.5C1,12.76,13.76,0,29.5,0S58,12.76,58,28.5   S45.24,57,29.5,57c-4.789,0-9.299-1.187-13.26-3.273L0,58z" />
+                  <path style="fill:#50c845;"
+                    d="M47.683,37.985c-1.316-2.487-6.169-5.331-6.169-5.331c-1.098-0.626-2.423-0.696-3.049,0.42   c0,0-1.577,1.891-1.978,2.163c-1.832,1.241-3.529,1.193-5.242-0.52l-3.981-3.981l-3.981-3.981c-1.713-1.713-1.761-3.41-0.52-5.242   c0.272-0.401,2.163-1.978,2.163-1.978c1.116-0.627,1.046-1.951,0.42-3.049c0,0-2.844-4.853-5.331-6.169   c-1.058-0.56-2.357-0.364-3.203,0.482l-1.758,1.758c-5.577,5.577-2.831,11.873,2.746,17.45l5.097,5.097l5.097,5.097   c5.577,5.577,11.873,8.323,17.45,2.746l1.758-1.758C48.048,40.341,48.243,39.042,47.683,37.985z" />
+                </g>
+              </svg>
+              WhatsApp</a>
 
       </div>
     </div>
     <!-- Mobile menu (hidden by default) -->
-    <div id="mobile-menu" class="bg-gray-800 h-screen w-full justify-center items-center text-white
-     absolute top-16 md:hidden hidden px-4 pb-4">
+    <div id="mobile-menu" class="movile-menu text-white
+     absolute top-16 md:hidden hidden">
 
-      <a href="#servicios" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Servicios</a>
-      <a href="#proyectos" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Proyectos</a>
-      <a href="#nosotros" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Nosotros</a>
-      <a href="#contacto" class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-300">Contacto</a>
+      <a href="#servicios"
+        class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Servicios</a>
+      <a href="#proyectos" class="movile-menu-item">Proyectos</a>
+      <a href="#nosotros"
+        class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-200">Nosotros</a>
+      <a href="#contacto"
+        class="text-4xl text-center justify-center uppercase block py-12 hover:text-gray-300">Contacto</a>
     </div>
     <script>
       // Simple hamburger toggle
@@ -52,7 +69,14 @@
       const mobileMenu = document.getElementById('mobile-menu');
       menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+        menuBtn.style.display = "none";
         document.getElementById("menu-btn").display = "none";
+      });
+      const menuBtnClose = document.getElementById('menu-btn-close');
+      menuBtnClose.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        document.getElementById("menu-btn").display = "block";
+
       });
     </script>
   </nav>
@@ -190,6 +214,8 @@
 
 
   <!-- Proyectos -->
+  <div id="overlay"></div>
+
   <section class="bg-gray-200 w-full px-2   md:py-6  md:px-48" id="proyectos">
     <h2 class="heading-section">Proyectos realizados</h2>
     <!--<div class="mb-8">
@@ -204,6 +230,8 @@
       <button type="button"
         class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-12.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 shadow-lg">Drywall</button>
     </div>-->
+    <div id="overlay"></div>
+
     <div class="overflow-x-hidden">
 
       <div class="grid grid-cols-2 grid-rows-3 gap-4 md:gamb-6 md:grid-cols-3 md:grid-rows-2">
@@ -225,7 +253,8 @@
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect4</span>
         </button>
         <button class="relative" onclick="mostrar()">
-          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/drywall-2.jpeg" alt="proyect5">
+          <img class="w-full h-48 object-cover rounded-none md:rounded" src="fuxion-pictures/drywall-2.jpeg"
+            alt="proyect5">
           <span
             class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">proyect5</span>
         </button>
@@ -254,12 +283,7 @@
   <section id="contacto" class="z-index-1 bg-gray-200 py-12">
     <div class="container mx-auto px-4 md:w-1/2">
       <h3 class="text-3xl font-bold text-center mb-6">Contáctanos</h3>
-      <form class="bg-white p-6 rounded-lg shadow space-y-4">
-        <input type="text" placeholder="Nombre" class="w-full border rounded px-4 py-12" required>
-        <input type="email" placeholder="Correo electrónico" class="w-full border rounded px-4 py-12" required>
-        <textarea placeholder="Mensaje" class="w-full border rounded px-4 py-12 h-32" required></textarea>
-        <button type="submit" class="w-full bg-[#800000] text-white py-12 rounded hover:bg-red-800">Enviar</button>
-      </form>
+
       <div class="text-center mt-6">
         <a href="https://wa.me/51967770433" target="_blank"
           class="bg-green-500 text-white px-6 py-3 rounded-lg inline-block hover:bg-green-400">WhatsApp</a>
@@ -280,26 +304,28 @@
     </script>
     © Servicios Generales Fuxion.</br> Todos los derechos reservados
   </footer>
+  <div id="overlay"></div>
+  <article class="fixed  inset-0 z-50  shadow-lg  rounded
+        " id="card">
 
-  <article class="fixed inset-0 z-50  shadow-lg flex items-center justify-center rounded
-       grid md:grid-cols-2" id="card">
-
-    <img id="card-img" src="" alt="" class=" md:h-48 object-cover">
-  <div class="relative">
-    <button id="btn-card" onClick="ocultar()"><img src="fuxion-pictures/iconos/cross.svg" alt="cross"
-        class="absolute h-10 top-2 right-2 bg-opacity-50 text-white px-2 py-1 rounded text-xs"></button>
-    <div class="p-4">
-      <h2 id="card-head" class="font-bold mb-2 uppercase"></h2>
-      <p id="card-p" class="text-sm"></p>
-      <div id="card-tags" class="my-3 text-sm">
-        <span class="rounded bg-blue-100 p-3 inline-block ">drywall</span>
-        <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br />
+    <img id="card-img" src="" alt="" class="relative  w-full h-48 md:h-full object-cover">
+    <div class="p-8 md:p-16 right-8 md:h-full flex items-center justify-center">
+      <button id="btn-card" onClick="ocultar()"><img src="fuxion-pictures/iconos/cross.svg" alt="cross"
+          class="absolute h-10 top-2 right-2 bg-opacity-50 text-white px-2 py-1 rounded text-xs"></button>
+      <div class="texto">
+        <h2 id="card-head" class="font-bold mb-2 uppercase"></h2>
+        <p id="card-p" class="text-xs md:text-sm"></p>
+        <div id="card-tags" class="my-3 text-sm">
+          <span class="rounded bg-blue-100 p-3 inline-block ">drywall</span>
+          <span class="rounded bg-blue-100 p-3 inline-block">drywall</span><br />
+        </div>
+        <span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="location"
+            class="w-5 h-5 inline-block mr-2">ubicacion,
+        </span>
       </div>
-      <span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="location"
-          class="w-5 h-5 inline-block mr-2">ubicacion,
-      </span>
-    </div></div>
+    </div>
   </article>
+
 </body>
 <script src="fuxion.js"></script>
 

@@ -29,23 +29,22 @@ document.addEventListener('scroll', barraScroll);
 
 
 
-
-
-
-
-
-
-document.getElementById("card").style.display="none";
 function mostrar(){
     document.getElementById("card").style.display="block";
 }
 function ocultar(){
     document.getElementById("card").style.display="none";
+    document.getElementById("overlay").style.display="none";
 }
 
+
+
 function mostrarCard(projectId) {
+    document.getElementById("overlay").style.display="block";
+
     var item = proyectos.find(p => p.id === projectId);
     document.getElementById("card").style.display="block";
+
     var imgElement = document.getElementById("card-img");
     imgElement.src = item.image;
     imgElement.alt = item.title;

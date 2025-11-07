@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios Generales - Estructuras Metálicas, Melamina y Drywall</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <style>
+     
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+   
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-image {
+            flex: 1;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 8px;
+            background-color: var(--light);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-text {
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+      
+        
+        /* Animaciones */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">ServiConstru</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Soluciones en Estructuras Metálicas, Melamina y Drywall</h1>
+                <p>Más de 30 años de experiencia ofreciendo servicios de calidad y durabilidad para tus proyectos de construcción y remodelación.</p>
+                <a href="#contacto" class="btn">Solicitar Cotización</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="nosotros">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nosotros</h2>
+                <p>Conoce más sobre nuestra trayectoria y compromiso con la calidad</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Somos una empresa con más de tres décadas de experiencia en el sector de la construcción y fabricación. Nos especializamos en estructuras metálicas, muebles en melamina y construcción en sistema drywall, siempre manteniendo los más altos estándares de calidad.</p>
+                    <p>Nuestro equipo de profesionales altamente capacitados está comprometido con entregar resultados que superen las expectativas de nuestros clientes, cumpliendo con los plazos establecidos y garantizando la durabilidad de cada proyecto.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+            <div class="stats">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">+30</div>
+                    <div class="stat-text">Años de Experiencia</div>
+                    <p>Conocemos lo que hacemos y lo hacemos bien, siempre con la confianza que solo da la experiencia.</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">+200</div>
+                    <div class="stat-text">Proyectos Realizados</div>
+                    <p>Cada proyecto es una historia de éxito. Más de 200 clientes satisfechos nos recomiendan.</p>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Calidad Garantizada</div>
+                    <p>Hacemos el trabajo con dedicación y nos enfocamos en el detalle para entregar un servicio que realmente marque la diferencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contáctanos</h2>
+                <p>Estamos listos para hacer realidad tu proyecto</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Dirección</h3>
+                            <p>Av. Principal #123, Ciudad</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>+1 (234) 567-8900</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@serviconstru.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Horario de Atención</h3>
+                            <p>Lun - Vie: 8:00 am - 6:00 pm</p>
+                            <p>Sábados: 8:00 am - 1:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Servicio de Interés</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Seleccione un servicio</option>
+                                <option value="estructuras">Estructuras Metálicas</option>
+                                <option value="melamina">Muebles en Melamina</option>
+                                <option value="drywall">Sistema Drywall</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        // Inicializar carrusel de proyectos
+        $(document).ready(function(){
+            $(".projects-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: true,
+                dots: false,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    1024: {
+                        items: 3
+                    }
+                }
+            });
+            
+            // Animación al hacer scroll
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const fadeInOnScroll = () => {
+                fadeElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 150;
+                    
+                    if (elementTop < window.innerHeight - elementVisible) {
+                        element.classList.add('visible');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', fadeInOnScroll);
+            fadeInOnScroll(); // Ejecutar una vez al cargar la página
+            
+            // Manejo del formulario de contacto
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+                this.reset();
+            });
+            
+            // Menú móvil
+            document.querySelector('.mobile-menu').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

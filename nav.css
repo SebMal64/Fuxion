@@ -1,206 +1,67 @@
-/* Variables de color */
-:root {
-  --guinda: #8B0000;
-  --guinda-oscuro: #660000;
-  --guinda-claro: #A52A2A;
-  --blanco: #FFFFFF;
-  --gris-claro: #F5F5F5;
-}
-
-/* Navbar principal */
-.navbar {
-  background-color: var(--guinda-claro);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.nav-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-}
-
-/* Logo */
-.logo {
-  margin-right: auto;
-}
-
-.logo a {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--guinda);
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-/* Menú desktop */
-.nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-left: auto;
-}
-
-.nav-link {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  position: relative;
-}
-
-.nav-link:hover {
-  color: var(--guinda);
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--guinda);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-/* Botón WhatsApp desktop */
-.whatsapp-btn {
-  background-color: #25D366;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-}
-
-.whatsapp-btn:hover {
-  background-color: #128C7E;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-}
-
-/* Menú hamburguesa */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-  margin-left: auto;
-  z-index: 1001;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: var(--guinda);
-  transition: all 0.3s ease;
-  border-radius: 2px;
-}
-
-/* Menú móvil */
-.mobile-menu {
-  position: fixed;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 70px);
-  background-color: var(--guinda);
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  z-index: 999;
-  padding-top: 2rem;
-}
-
-.mobile-menu.active {
-  display: flex;
-}
-
-.close-menu {
-  position: absolute;
-  top: 1rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  color: var(--blanco);
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 1002;
-}
-
-.mobile-menu-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-}
-
-.mobile-nav-link {
-  color: var(--blanco);
-  text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 500;
-  transition: transform 0.3s ease;
-  padding: 0.5rem 0;
-}
-
-.mobile-nav-link:hover {
-  transform: translateX(10px);
-}
-
-.mobile-whatsapp-btn {
-  background-color: #25D366;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-}
-
-.mobile-whatsapp-btn:hover {
-  background-color: #128C7E;
-  transform: scale(1.05);
-}
-
-/* Animaciones hamburguesa */
-.hamburger.active .bar:nth-child(1) {
-  transform: rotate(45deg) translate(8px, 8px);
-}
-
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
-  
-  .hamburger {
-    display: flex;
-  }
-}
+ 
+        /* Header */
+        header {
+            background-color: rgb(186, 57, 57);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+   

@@ -57,6 +57,6 @@ function mostrarCard(projectId) {
     });
     document.getElementById("card-tags").innerHTML = tagsHtml;
     document.getElementById("location-card").innerHTML = 
-    `<span id="location-card"><img src="fuxion-pictures/iconos/marker.svg" alt="cross" class="text-sm w-5 h-5 inline-block mr-2">${item.location}
+    `<span id="location-card"><img src="Fuxion-pictures/iconos/marker.svg" alt="cross" class="text-sm w-5 h-5 inline-block mr-2">${item.location}
 </span>`
 }

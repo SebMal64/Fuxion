@@ -1,1 +1,1 @@
-https://fuxion.netlify.app/
+https://Fuxion.netlify.app/

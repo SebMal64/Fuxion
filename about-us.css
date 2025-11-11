@@ -6,7 +6,7 @@
             --gray: #7F8C8D;
         }
         #nosotros {
-            background-color: rgb(186, 186, 186);
+            background-color: rgb(85, 85, 85);
         }
      
         .stats {
@@ -26,16 +26,13 @@
           /*  box-shadow: 0 5px 15px rgba(0,0,0,0.08);*/
             transition: all 0.3s ease;
         }
-        
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        
+      
         .stat-icon {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+            border: 1px solid white;
+            background: rgba(20, 20, 20, 0.097);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -52,7 +49,7 @@
         .stat-number {
             font-size: 1rem;
             font-weight: 600;
-            color: rgb(52, 52, 52);
+            color: rgb(205, 205, 205);
             margin-bottom: 0.3rem;
         }
         

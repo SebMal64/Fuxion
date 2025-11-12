@@ -20,8 +20,8 @@
         .stat-item {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
-            padding: 2rem;
+            gap: 1rem;
+            padding: 1.5rem;
             border-radius: 8px;
         }
       

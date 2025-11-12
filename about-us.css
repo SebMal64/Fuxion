@@ -6,7 +6,7 @@
             --gray: #7F8C8D;
         }
         #nosotros {
-            background-color: rgb(85, 85, 85);
+            background-color: rgb(68, 48, 48);
         }
      
         .stats {
@@ -23,16 +23,12 @@
             gap: 1.5rem;
             padding: 2rem;
             border-radius: 8px;
-          /*  box-shadow: 0 5px 15px rgba(0,0,0,0.08);*/
-            transition: all 0.3s ease;
         }
       
         .stat-icon {
             width: 70px;
             height: 70px;
 
-            border: 1px solid white;
-            background: rgba(20, 20, 20, 0.097);
             border-radius: 50%;
             display: flex;
             align-items: center;

@@ -18,18 +18,15 @@
         }
         
         .project-card {
-            background-color: white;
+            background-color: rgb(12, 15, 79);
             border-radius: 8px;
-            overflow: hidden;
+          
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             margin: 0 15px;
             transition: all 0.3s ease;
         }
         
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
+       
         
         .project-image {
             height: 250px;
@@ -37,18 +34,45 @@
             background-size: cover;
             background-position: center;
         }
-        
+        .project-info.ks {
+background: #d6d6d6;
+background: linear-gradient(360deg, rgba(53, 0, 0, 0.649) 24%, rgba(218, 77, 77, 0.145) 100%);
+  padding: 15px;
+  position: relative;
+  bottom: -1px;
+}
+
+/* Opcional: para mejorar la legibilidad aún más */
+.project-card {
+  position: relative;
+}
+
+.project-info.ks h3,
+.project-info.ks p {
+  margin: 0;
+  padding: 0px 0;
+}
+
+/* Alternativa con gradiente de fondo */
+.project-info.ks.alternative {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+  backdrop-filter: blur(8px);
+}
         .project-info {
-            padding: 1.5rem;
+        
+            padding: 1rem;
         }
         
-        .project-info h3 {
-            margin-bottom: 0.5rem;
-            color: var(--dark);
+        .project-info h3 {           
+
+            line-height: 2rem;
+            color: white;
         }
         
         .project-info p {
-            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+            color: rgb(227, 227, 227);
         }
         
         .gallery {

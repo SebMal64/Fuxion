@@ -85,4 +85,36 @@
             cursor: pointer;
         }
         
-   
+   /* Menú móvil */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 10.3vh;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 10.3vh);
+    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    display: none;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 1rem 0;
+  }
+  
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+  }
+  
+  .mobile-menu {
+    display: block;
+  }
+}

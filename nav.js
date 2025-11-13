@@ -1,24 +1,21 @@
-// Agregar este script
 document.addEventListener('DOMContentLoaded', function() {
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeMenu = document.getElementById('closeMenu');
+  const mobileMenuBtn = document.querySelector('.mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+  const hamburgerIcon = document.querySelector('.fa-bars');
   
-  hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
+  mobileMenuBtn.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+    hamburgerIcon.classList.toggle('fa-times'); // Cambia a X
+    hamburgerIcon.classList.toggle('fa-bars');  // Cambia a hamburguesa
   });
   
-  closeMenu.addEventListener('click', function() {
-    hamburger.classList.remove('active');
-    mobileMenu.classList.remove('active');
-  });
-  
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-whatsapp-btn');
-  mobileLinks.forEach(link => {
+  // Cerrar menú al hacer click en un enlace
+  const links = document.querySelectorAll('.nav-links a');
+  links.forEach(link => {
     link.addEventListener('click', function() {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('active');
+      navLinks.classList.remove('active');
+      hamburgerIcon.classList.remove('fa-times');
+      hamburgerIcon.classList.add('fa-bars');
     });
   });
 });

@@ -59,7 +59,7 @@
         }
         #btn-1 {
 background: #730000;
-background: linear-gradient(360deg, rgba(148, 0, 0, 0.87) 24%, rgba(251, 0, 4, 0.73) 100%);        }
+background: linear-gradient(360deg, rgb(184, 0, 28) 24%, rgb(251, 67, 70) 100%);        }
         #btn-2 {
             border: 1px solid white;
             background-color: rgba(130, 130, 130, 0.195);

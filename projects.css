@@ -75,7 +75,6 @@
             border-radius: 8px;
           
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin: 0 15px;
             transition: all 0.3s ease;
         }
         
@@ -89,7 +88,7 @@
         }
         .project-info.ks {
 background: #d6d6d6;
-background: linear-gradient(360deg, rgba(53, 0, 0, 0.649) 24%, rgba(218, 77, 77, 0.145) 100%);
+background: linear-gradient(360deg, rgba(4, 0, 53, 0.649) 24%, rgba(218, 77, 77, 0.145) 100%);
   padding: 15px;
   position: relative;
   bottom: -1px;
@@ -100,8 +99,8 @@ background: linear-gradient(360deg, rgba(53, 0, 0, 0.649) 24%, rgba(218, 77, 77,
   position: relative;
 }
 
-.project-info.ks h3,
-.project-info.ks p {
+.project-info .ks h3,
+.project-info .ks p {
   margin: 0;
   padding: 0px 0;
 }
